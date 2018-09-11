@@ -1,3 +1,5 @@
 Gia na anebaseis kaneis: git add -A
+		
 			 git commit -m "edo ena sxolio gia tis allages pou exeis kanei"
+			 
 			 git push (tha sou zitisei email kai kodiko)
