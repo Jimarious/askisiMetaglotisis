@@ -18,14 +18,13 @@ int main(void){
   while(i<4){
     if(flag==0){
       c=getchar();
-      flag=c==EOF;
+      flag=c==10;//ta ubuntu mu anti gia EOF evazan ton arthmo 10 sto telos tu arxeiu, mu phre poly ora na to katalavo, de gnorizo giati...
     }
     if(flag)
       c=0;
     a+=c*pow(256,j);
     i++;
     j--;
-    printf("%u\n",a);
   }
   while(a!=0){
     p[l]=(a%85)+33;
@@ -35,8 +34,10 @@ int main(void){
   for(l--; l>=0; l--){
     putchar(p[l]);
   }
-  if(flag)
+  if(flag){
+    putchar('\n');
     exit(0);//afto edo to exo gia argotera pu tha to valo se megalytero loop.
+  }
   putchar('\n');
   return 0;
 }
