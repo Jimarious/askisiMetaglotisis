@@ -12,7 +12,7 @@ int main(void){
   //N=o arithmos ton 0 pu xreazomaste ga na symplhrothei h tetrada.
   //m=mh proshmasmenos akeraios gai thn kodkopoihsh.
   bool flag=0;
-  int i=0,j=3,l=0,n;
+  int i=0,j=3,l=0,N=0;
   unsigned int a=0;
   char c=0,p[5];
   while(i<4){
@@ -20,8 +20,10 @@ int main(void){
       c=getchar();
       flag=c==10;//ta ubuntu mu anti gia EOF evazan ton arthmo 10 sto telos tu arxeiu, mu phre poly ora na to katalavo, de gnorizo giati...
     }
-    if(flag)
+    if(flag){
       c=0;
+      N++;
+    }
     a+=c*pow(256,j);
     i++;
     j--;
@@ -31,7 +33,7 @@ int main(void){
     a/=85;
     l++;
   }
-  for(l--; l>=0; l--){
+  for(l--; l>=N; l--){
     putchar(p[l]);
   }
   if(flag){
