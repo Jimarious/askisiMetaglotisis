@@ -15,6 +15,7 @@ int main(void){
   int i=0,j=3,l=0,N=0;
   unsigned int a=0;
   char c=0,p[5];
+  printf("<~");
   while(i<4){
     if(flag==0){
       c=getchar();
@@ -37,9 +38,9 @@ int main(void){
     putchar(p[l]);
   }
   if(flag){
-    putchar('\n');
+    printf("~>\n");
     exit(0);//afto edo to exo gia argotera pu tha to valo se megalytero loop.
   }
-  putchar('\n');
+  printf("~>\n");
   return 0;
 }
